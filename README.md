@@ -1,315 +1,191 @@
-# 📘 Plano de Ensino - Interfaces Industriais  
-Carga horária: 80 horas (20 aulas semanais – 4h por aula)  
-Modalidade: Presencial / Laboratório  
-Professor: Gabriel Claro  
+# IFACI - Sistema Supervisório Industrial
+
+
+A["🌐 Frontend <br> Next.js + React"] -->|"API REST"| B["⚙️ Backend <br> Node.js + Express"]
+
+B --> C["🏭 Dispositivos Industriais"]
+
+C --> D["🌡️ Temperatura"]
+C --> E["💨 Pressão"]
+C --> F["💧 Umidade"]
+C --> G["📡 Sensor de Presença"]
+C --> H["🔒 Relé de Segurança"]
+```
 
 ---
 
-## 🎯 Objetivo Geral da Disciplina
+# 📖 Sobre o Projeto
 
-Capacitar o aluno a projetar e implementar um sistema supervisório Web aplicado a ambientes industriais, integrando controladores lógicos programáveis via OPC-UA, utilizando middleware, backend e front-end Web, com foco em arquitetura de sistemas, comunicação industrial, alarmística, históricos e desenvolvimento de interfaces IHM de alta performance.
-
----
-
-## 🧠 Competências Desenvolvidas
-
-Ao final da disciplina, o aluno será capaz de:
-
-- Projetar arquiteturas de sistemas supervisórios baseados em Web  
-- Integrar sistemas industriais via OPC-UA e middleware  
-- Implementar backend para aquisição, tratamento e armazenamento de dados industriais  
-- Desenvolver aplicações Web para supervisão em tempo real  
-- Implementar alarmes, históricos e gráficos de tendência  
-- Projetar interfaces IHM seguindo princípios da norma ISA-101  
+```mermaid
+mindmap
+  root((IFACI))
+    IoT
+    Automação Industrial
+    Monitoramento em Tempo Real
+    API REST
+    Dashboard Supervisório
+    Indústria 4.0
+```
 
 ---
 
-## 🗂️ Organização Geral do Semestre
+# 🧠 Funcionalidades
 
-O semestre está dividido em 4 grandes módulos:
+```mermaid
+flowchart TD
 
-1. **Fundamentos Avançados de Desenvolvimento Web Aplicado (Aulas 1–4)**  
-2. **Arquitetura de Sistemas Supervisórios e Comunicação Industrial (Aulas 5–9)**  
-3. **Backend, Middleware, Alarmes e Históricos (Aulas 10–14)**  
-4. **Interfaces IHM e Sistemas Supervisórios (Aulas 15–20)**  
-
----
-
-## 📅 Cronograma Detalhado das Aulas
-
----
-
-### 🔹 MÓDULO 1 – Desenvolvimento Web Aplicado a Sistemas Supervisórios (Aulas 1 a 4)
-
-> Revisão em nível intermediário/avançado focada em aplicações industriais (não introdutório)
+A["📦 Sistema"] --> B["✅ Cadastro de Dispositivos"]
+A --> C["📊 Monitoramento em Tempo Real"]
+A --> D["🌐 Controle de Conexão"]
+A --> E["🔒 Relé de Segurança"]
+A --> F["📡 Sensores Industriais"]
+```
 
 ---
 
-### 📍 Aula 1 – Apresentação da Disciplina e Introdução a Sistemas Supervisórios Web  
-**Conteúdos:**
-- Apresentação da disciplina e do projeto final  
-- Revisão de conceitos de sistemas supervisórios (SCADA, IHM, IIoT)  
-- Diferenças entre sistemas supervisórios tradicionais e supervisórios Web  
-- Arquitetura geral do projeto do semestre  
+# 🛠️ Tecnologias Utilizadas
 
-**Atividade prática:**
-- Análise de arquiteturas reais de sistemas supervisórios Web  
-- Definição dos grupos e escolha do processo a ser simulado  
+```mermaid
+graph TD
 
----
+A["💻 Tecnologias"]
 
-### 📍 Aula 2 – Arquitetura de Aplicações Web para Sistemas em Tempo Real  
-**Conteúdos:**
-- Arquitetura cliente-servidor aplicada à supervisão  
-- REST, WebSockets e comunicação em tempo real  
-- Separação de responsabilidades: front-end, backend e middleware  
-- Boas práticas para aplicações críticas  
+A --> B["⚛️ React"]
+A --> C["▲ Next.js"]
+A --> D["🟦 TypeScript"]
+A --> E["🎨 Tailwind CSS"]
 
-**Atividade prática:**
-- Criação da estrutura inicial do projeto (front + back)  
-- Testes de comunicação em tempo real entre front-end e backend  
+A --> F["🟢 Node.js"]
+A --> G["🚂 Express"]
+
+A --> H["🐙 Git"]
+A --> I["📮 Postman"]
+A --> J["🧩 VS Code"]
+```
 
 ---
 
-### 📍 Aula 3 – Backend para Aquisição e Distribuição de Dados Industriais  
-**Conteúdos:**
-- Padrões de API para sistemas supervisórios  
-- Gerenciamento de estados e dados em tempo real  
-- Cache, filas e tratamento de latência  
-- Organização de serviços para alarmes e históricos  
+# 📂 Estrutura do Projeto
 
-**Atividade prática:**
-- Implementação de uma API básica de dados em tempo real  
-- Simulação de variáveis de processo no backend  
+```mermaid
+graph TD
 
----
+A["📁 IFACI"]
 
-### 📍 Aula 4 – Front-end Avançado para Monitoramento em Tempo Real  
-**Conteúdos:**
-- Gerenciamento de estado (Redux, Context, etc.)  
-- Componentização para aplicações industriais  
-- Renderização eficiente de dados em tempo real  
-- Introdução a dashboards industriais  
+A --> B["📁 frontend"]
+A --> C["📁 api"]
 
-**Atividade prática:**
-- Construção de um dashboard Web simples com dados simulados  
+B --> D["📁 app"]
+B --> E["📁 components"]
+B --> F["📁 public"]
+
+C --> G["📄 server.js"]
+C --> H["📄 package.json"]
+```
 
 ---
 
-## 🔹 MÓDULO 2 – Arquitetura Supervisória e Comunicação Industrial (Aulas 5 a 9)
+# ▶️ Como Executar
+
+## ⚙️ Backend
+
+```bash
+cd api
+npm install
+npm start
+```
+
+API:
+```bash
+http://localhost:8081
+```
 
 ---
 
-### 📍 Aula 5 – Arquitetura de Sistemas Supervisórios  
-**Conteúdos:**
-- Componentes de um sistema supervisório  
-- Servidor de dados, clientes, viewers e bancos históricos  
-- Arquiteturas centralizadas vs distribuídas  
-- Introdução ao projeto final  
+## 🎨 Frontend
 
-**Atividade prática:**
-- Desenho do diagrama de arquitetura do projeto do grupo  
+```bash
+cd frontend/my-app
+npm install
+npm run dev
+```
 
----
-
-### 📍 Aula 6 – Protocolos Industriais e Comunicação Ethernet  
-**Conteúdos:**
-- Protocolos industriais Ethernet  
-- Conceitos de cliente, servidor e publicador  
-- Introdução ao OPC-UA  
-- Segurança em comunicação industrial  
-
-**Atividade prática:**
-- Configuração de um servidor OPC-UA simulado  
+Aplicação:
+```bash
+http://localhost:3000
+```
 
 ---
 
-### 📍 Aula 7 – OPC-UA na Prática  
-**Conteúdos:**
-- Estrutura de nós, variáveis e métodos  
-- Leitura e escrita de variáveis  
-- Monitoramento de eventos  
-- Boas práticas de modelagem OPC-UA  
+# 🔗 Endpoints
 
-**Atividade prática:**
-- Leitura de dados de um servidor OPC-UA via cliente  
+```mermaid
+graph LR
 
----
+A["GET /devices"] --> B["Buscar dispositivos"]
 
-### 📍 Aula 8 – Middleware Industrial com Node-RED  
-**Conteúdos:**
-- Conceito de middleware industrial  
-- Arquitetura do Node-RED  
-- Fluxos de aquisição, tratamento e roteamento de dados  
-- Integração OPC-UA + APIs  
+C["POST /devices"] --> D["Criar dispositivo"]
 
-**Atividade prática:**
-- Criação de fluxos Node-RED para aquisição OPC-UA e envio ao backend  
+E["PUT /devices/:id"] --> F["Atualizar dispositivo"]
+
+G["PATCH /devices/:id/conexao"] --> H["Alterar conexão"]
+
+I["DELETE /devices/:id"] --> J["Remover dispositivo"]
+```
 
 ---
 
-### 📍 Aula 9 – Integração Completa: OPC-UA → Node-RED → Backend  
-**Conteúdos:**
-- Tratamento de dados industriais  
-- Normalização e filtragem  
-- Gerenciamento de falhas de comunicação  
-- Monitoramento da cadeia de dados  
+# 📦 Exemplo JSON
 
-**Atividade prática:**
-- Pipeline completo funcionando com dados reais ou simulados  
-
----
-
-## 🔹 MÓDULO 3 – Backend Supervisório: Alarmes, Históricos e Banco de Dados (Aulas 10 a 14)
-
----
-
-### 📍 Aula 10 – Integração com Banco de Dados para Sistemas Supervisórios  
-**Conteúdos:**
-- Modelagem de dados industriais  
-- Tabelas de variáveis, históricos e alarmes  
-- Estratégias de armazenamento em tempo real  
-
-**Atividade prática:**
-- Criação do banco de dados do projeto  
+```json
+{
+  "id": "EQP-001",
+  "nome": "Sensor Industrial",
+  "statusDispositivo": "online",
+  "conexaoAtiva": true,
+  "travaLiberada": false,
+  "sensores": {
+    "temperatura": 25,
+    "pressao": 2.4,
+    "umidade": 50,
+    "sensorPresenca": true
+  }
+}
+```
 
 ---
 
-### 📍 Aula 11 – Implementação de Históricos de Processo  
-**Conteúdos:**
-- Conceito de históricos (process historian)  
-- Estratégias de amostragem  
-- Consultas por intervalo de tempo  
+# 🎯 Objetivo
 
-**Atividade prática:**
-- Armazenamento contínuo de variáveis no banco  
-
----
-
-### 📍 Aula 12 – Alarmística Industrial  
-**Conteúdos:**
-- Conceitos de alarme, evento e condição  
-- Tipos de alarmes e prioridades  
-- Reconhecimento de alarmes  
-- Boas práticas de alarmística  
-
-**Atividade prática:**
-- Implementação de alarmes no backend e Node-RED  
+```mermaid
+journey
+    title Objetivos do Projeto
+    section Desenvolvimento
+      API REST: 5: Isabelle
+      Frontend Responsivo: 5: Isabelle
+      Integração IoT: 4: Isabelle
+      Monitoramento Industrial: 5: Isabelle
+```
 
 ---
 
-### 📍 Aula 13 – Segurança e Controle de Acesso  
-**Conteúdos:**
-- Autenticação e autorização em sistemas supervisórios  
-- Perfis de operador e supervisor  
-- Logs e auditoria  
+# 👩‍💻 Autor
 
-**Atividade prática:**
-- Implementação de login e níveis de usuário no projeto  
+```mermaid
+graph TD
 
----
-
-### 📍 Aula 14 – Gráficos de Tendência e Visualização Histórica  
-**Conteúdos:**
-- Tipos de gráficos industriais  
-- Performance em visualização de grandes volumes  
-- Filtros e escalas  
-
-**Atividade prática:**
-- Implementação de tela de históricos com gráficos  
+A["👩‍💻 Isabelle Nastri Sales"]
+A --> B["🏫 SENAI"]
+A --> C["📚 Interfaces Industriais"]
+A --> D["⚙️ Projeto Acadêmico"]
+```
 
 ---
 
-## 🔹 MÓDULO 4 – Interfaces IHM e Sistemas Supervisórios (Aulas 15 a 20)
+# 📄 Licença
 
-> Parte final focada especificamente em IHM, conforme solicitado.
+```mermaid
+flowchart LR
 
----
-
-### 📍 Aula 15 – Introdução às Interfaces Homem-Máquina (IHM Industrial)  
-**Conteúdos:**
-- Conceitos de IHM  
-- Diferença entre IHM, SCADA e supervisório Web  
-- Papel do operador e do supervisor  
-- Erros comuns em IHMs  
-
-**Atividade prática:**
-- Análise crítica de telas industriais reais  
-
----
-
-### 📍 Aula 16 – IHM de Alta Performance – Norma ISA-101  
-**Conteúdos:**
-- Princípios da ISA-101  
-- Uso correto de cores  
-- Hierarquia de telas  
-- Destaque de alarmes e situações anormais  
-
-**Atividade prática:**
-- Redesenho conceitual das telas do projeto  
-
----
-
-### 📍 Aula 17 – Telas de Operação: Modo Manual e Modo Automático  
-**Conteúdos:**
-- Estados de processo  
-- Intertravamentos e permissivos  
-- Indicação visual de modos de operação  
-
-**Atividade prática:**
-- Implementação das telas de modo manual e automático  
-
----
-
-### 📍 Aula 18 – Telas de Alarmes e Diagnóstico  
-**Conteúdos:**
-- Layout de telas de alarmes  
-- Navegação e filtros  
-- Boas práticas de diagnóstico operacional  
-
-**Atividade prática:**
-- Implementação da tela de alarmes no front-end  
-
----
-
-### 📍 Aula 19 – Telas de Históricos, Gráficos e Dashboards Supervisórios  
-**Conteúdos:**
-- Layout de telas de tendência  
-- Dashboards operacionais vs gerenciais  
-- Performance e usabilidade  
-
-**Atividade prática:**
-- Finalização das telas de históricos e dashboards  
-
----
-
-### 📍 Aula 20 – Apresentação Final dos Projetos  
-**Conteúdos:**
-- Demonstração completa dos sistemas  
-- Avaliação técnica e funcional  
-- Feedback final  
-
-**Atividade prática:**
-- Apresentação e entrega final do projeto  
-
----
-
-## 📝 Avaliação da Disciplina
-
-- Projeto final de sistema supervisório Web: **70%**  
-- Entregas parciais e atividades práticas: **20%**  
-- Participação e envolvimento em aula: **10%**  
-
----
-
-## 📚 Bibliografia Básica
-
-- ISA-101 – Human Machine Interfaces for Process Automation Systems  
-- Boyer, S. A. – SCADA: Supervisory Control and Data Acquisition  
-- OPC Foundation – OPC UA Specifications  
-- Documentação oficial do Node-RED  
-
----
-
----
-
+A["📚 Projeto Educacional"] --> B["Uso Acadêmico"]
+```
