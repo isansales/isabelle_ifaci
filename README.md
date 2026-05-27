@@ -1,93 +1,95 @@
-# IFACI - Sistema Supervisório Industrial
+# 🚀 IFACI - Sistema Supervisório Industrial
 
-
-A["🌐 Frontend <br> Next.js + React"] -->|"API REST"| B["⚙️ Backend <br> Node.js + Express"]
-
-B --> C["🏭 Dispositivos Industriais"]
-
-C --> D["🌡️ Temperatura"]
-C --> E["💨 Pressão"]
-C --> F["💧 Umidade"]
-C --> G["📡 Sensor de Presença"]
-C --> H["🔒 Relé de Segurança"]
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/Node.js-Backend-green?style=for-the-badge&logo=node.js">
+  <img src="https://img.shields.io/badge/Next.js-Frontend-black?style=for-the-badge&logo=next.js">
+  <img src="https://img.shields.io/badge/React-TypeScript-blue?style=for-the-badge&logo=react">
+  <img src="https://img.shields.io/badge/IoT-Indústria%204.0-orange?style=for-the-badge">
+</p>
 
 ---
 
-# 📖 Sobre o Projeto
+# Sobre o Projeto
+
+O **IFACI** é uma plataforma web desenvolvida para monitoramento de dispositivos industriais em tempo real utilizando conceitos de:
+
+- Automação Industrial
+- Internet das Coisas (IoT)
+- Indústria 4.0
+- Sistemas Supervisórios
+-  API REST
+
+---
+
+# Funcionalidades
+
+- Cadastro de dispositivos
+- Monitoramento em tempo real
+- Sensores industriais simulados
+- Controle de conexões
+- Relé de segurança
+- Integração frontend + backend
+
+---
+
+# Arquitetura do Projeto
 
 ```mermaid
-mindmap
-  root((IFACI))
-    IoT
-    Automação Industrial
-    Monitoramento em Tempo Real
-    API REST
-    Dashboard Supervisório
-    Indústria 4.0
+graph LR
+
+A[Frontend - Next.js] -->|API REST| B[Backend - Node.js]
+
+B --> C[Dispositivos]
+
+C --> D[Temperatura]
+C --> E[Pressão]
+C --> F[Umidade]
+C --> G[Sensor Presença]
 ```
 
 ---
 
-# 🧠 Funcionalidades
+# Tecnologias Utilizadas
 
-```mermaid
-flowchart TD
+## Frontend
+- Next.js
+- React.js
+- TypeScript
+- Tailwind CSS
 
-A["📦 Sistema"] --> B["✅ Cadastro de Dispositivos"]
-A --> C["📊 Monitoramento em Tempo Real"]
-A --> D["🌐 Controle de Conexão"]
-A --> E["🔒 Relé de Segurança"]
-A --> F["📡 Sensores Industriais"]
-```
+## Backend
+- Node.js
+- Express.js
+
+## Ferramentas
+- Git
+- GitHub
+- Postman
+- VS Code
 
 ---
 
-# 🛠️ Tecnologias Utilizadas
+# Estrutura do Projeto
 
 ```mermaid
 graph TD
 
-A["💻 Tecnologias"]
+A[IFACI]
 
-A --> B["⚛️ React"]
-A --> C["▲ Next.js"]
-A --> D["🟦 TypeScript"]
-A --> E["🎨 Tailwind CSS"]
+A --> B[frontend]
+A --> C[api]
 
-A --> F["🟢 Node.js"]
-A --> G["🚂 Express"]
+B --> D[app]
+B --> E[components]
 
-A --> H["🐙 Git"]
-A --> I["📮 Postman"]
-A --> J["🧩 VS Code"]
+C --> F[server.js]
 ```
 
 ---
 
-# 📂 Estrutura do Projeto
+# Como Executar
 
-```mermaid
-graph TD
-
-A["📁 IFACI"]
-
-A --> B["📁 frontend"]
-A --> C["📁 api"]
-
-B --> D["📁 app"]
-B --> E["📁 components"]
-B --> F["📁 public"]
-
-C --> G["📄 server.js"]
-C --> H["📄 package.json"]
-```
-
----
-
-# ▶️ Como Executar
-
-## ⚙️ Backend
+## Backend
 
 ```bash
 cd api
@@ -95,14 +97,15 @@ npm install
 npm start
 ```
 
-API:
+API disponível em:
+
 ```bash
 http://localhost:8081
 ```
 
 ---
 
-## 🎨 Frontend
+## Frontend
 
 ```bash
 cd frontend/my-app
@@ -110,7 +113,8 @@ npm install
 npm run dev
 ```
 
-Aplicação:
+Aplicação disponível em:
+
 ```bash
 http://localhost:3000
 ```
@@ -119,19 +123,13 @@ http://localhost:3000
 
 # 🔗 Endpoints
 
-```mermaid
-graph LR
-
-A["GET /devices"] --> B["Buscar dispositivos"]
-
-C["POST /devices"] --> D["Criar dispositivo"]
-
-E["PUT /devices/:id"] --> F["Atualizar dispositivo"]
-
-G["PATCH /devices/:id/conexao"] --> H["Alterar conexão"]
-
-I["DELETE /devices/:id"] --> J["Remover dispositivo"]
-```
+| Método | Endpoint | Função |
+|---|---|---|
+| GET | `/devices` | Buscar dispositivos |
+| POST | `/devices` | Criar dispositivo |
+| PUT | `/devices/:id` | Atualizar dispositivo |
+| PATCH | `/devices/:id/conexao` | Alterar conexão |
+| DELETE | `/devices/:id` | Remover dispositivo |
 
 ---
 
@@ -147,8 +145,7 @@ I["DELETE /devices/:id"] --> J["Remover dispositivo"]
   "sensores": {
     "temperatura": 25,
     "pressao": 2.4,
-    "umidade": 50,
-    "sensorPresenca": true
+    "umidade": 50
   }
 }
 ```
@@ -157,35 +154,17 @@ I["DELETE /devices/:id"] --> J["Remover dispositivo"]
 
 # 🎯 Objetivo
 
-```mermaid
-journey
-    title Objetivos do Projeto
-    section Desenvolvimento
-      API REST: 5: Isabelle
-      Frontend Responsivo: 5: Isabelle
-      Integração IoT: 4: Isabelle
-      Monitoramento Industrial: 5: Isabelle
-```
+Desenvolver uma plataforma supervisória industrial moderna baseada em conceitos de IoT e Indústria 4.0.
 
 ---
 
 # 👩‍💻 Autor
 
-```mermaid
-graph TD
-
-A["👩‍💻 Isabelle Nastri Sales"]
-A --> B["🏫 SENAI"]
-A --> C["📚 Interfaces Industriais"]
-A --> D["⚙️ Projeto Acadêmico"]
-```
+**Isabelle Nastri Sales**  
+🏫 SENAI - Interfaces Industriais
 
 ---
 
 # 📄 Licença
 
-```mermaid
-flowchart LR
-
-A["📚 Projeto Educacional"] --> B["Uso Acadêmico"]
-```
+Projeto desenvolvido para fins educacionais.
