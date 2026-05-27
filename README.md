@@ -162,9 +162,3 @@ Desenvolver uma plataforma supervisória industrial moderna baseada em conceitos
 
 **Isabelle Nastri Sales**  
 🏫 SENAI - Interfaces Industriais
-
----
-
-# 📄 Licença
-
-Projeto desenvolvido para fins educacionais.
